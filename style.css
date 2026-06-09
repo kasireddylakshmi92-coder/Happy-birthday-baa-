@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* INTRO SCREEN */
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #ff4d6d, #000);
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 50px;
+}
+
+.intro button {
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.content {
+  display: none;
+  padding: 30px;
+  animation: fadeIn 2s ease;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  color: #ff4d6d;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.center {
+  text-align: center;
+  margin: 30px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gift {
+  display: none;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  max-width: 800px;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* floating glow */
+body::before {
+  content: "✨ 💛 ✨ 💛 ✨ 💛 ✨";
+  position: fixed;
+  width: 100%;
+  opacity: 0.15;
+  font-size: 25px;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
